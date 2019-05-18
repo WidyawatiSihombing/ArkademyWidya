@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<body>
+<p id="tampil"></p>
+
+</body>
+<script type="text/javascript">
+    //    Jawaban soal 3
+    var dataTampil = 'myCountChar("bootcamp","o") : ' + myCountChar ("bootcamp","o")+'<br>'+'myCountChar ("arkademy","k") : ' + myCountChar ("arkademy","k")
+    document.getElementById("tampil").innerHTML=dataTampil;
+    function myCountChar(words,character) {
+        var i=0,jlh=0;
+        while(words[i]!='' && words[i] != null){
+            if(words[i]==character){
+                jlh++;
+            }
+            console.log(words[i]);
+            i++;
+        }
+        return jlh;
+
+    }
+</script>
+</body>
+</html>

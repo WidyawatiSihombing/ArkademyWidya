@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<body>
+<p id="tampil"></p>
+
+</body>
+<script type="text/javascript">
+    //    Jawaban soal 5
+    var data =['h','g','a','b','d','f'];
+    console.log(minmax(data));
+    document.getElementById("tampil").innerHTML='minmax([\'h\',\'g\',\'a\',\'b\',\'d\',\'f\'])=['+minmax(data)+']';
+
+    function minmax(data) {
+        var X = [];
+        var terkecil = 'z';
+        var terbesar = 'a';
+        var indexTerkecil =0,indexTerbesar =0;
+        for(i=0;i<data.length;i++){
+            terkecil = minChar(terkecil,data[i]);
+            indexTerkecil = i;
+        }
+        for(i=indexTerkecil;i<data.length;i++){
+            terbesar = maxChar(terbesar,data[i])
+            indexTerbesar = i;
+        }
+        X[0]=terkecil;
+        X[1]=terbesar;
+        return X;
+
+    }
+    function maxChar(a, b) {
+        if (a > b) return a;
+        else return b;
+    }
+    function minChar(a, b) {
+        if (a < b) return a;
+        else return b;
+    }
+
+</script>
+</body>
+</html>

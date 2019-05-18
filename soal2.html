@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<body>
+<p id="tampil"></p>
+
+</body>
+<script type="text/javascript">
+//    Jawaban soal 2a
+    var angka =prompt('Masukkan Bilangan Ganjil : ');
+    var data =generateString(angka);
+//    data=["E8Obczjhi9ziwTwdHoZdFiYWnhynRI5N","l3sAtc43I0cEOf6kwTnJAGZg9Hcy8cCH","Q7Pa4PfzBxoAx7ljOwRy1utNz9lcSacd","Bh1cOCNNFTWm6svQA4Q9SDPimmMTTx9O"];
+    checkArray(data);
+    alert(checkArray(data));
+    console.log(data);
+
+    function generateString(jlh){
+        var data=[];
+        for(i=1;i<=jlh;i++){
+            data[i]=generateRandomString32();
+        }
+        return data;
+    }
+    function generateRandomString32() {
+        chars ='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        length=32;
+        var result='';
+        for (var i = length; i > 0; --i)
+            result += chars[Math.floor(Math.random() * chars.length)];
+        return result;
+    }
+
+//    Jawaban soal 2b
+
+    function checkArray(data) {
+        var x=0;
+        for(i=0;i<data.length;i++){
+            for(j=i+1;j<data.length;j++){
+                if(data[i]==data[j])
+                    x+=1;
+            }
+        }
+        if(x!=0)
+            msg = 'Data Array Ada yg sama';
+        else
+            msg = 'Data Array Tidak Ada yg sama';
+
+        return msg;
+
+    }
+</script>
+</body>
+</html>
